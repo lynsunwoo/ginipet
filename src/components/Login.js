@@ -28,7 +28,7 @@ function Login(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     // axios.post('http://localhost:9070/login', form)
-    axios.post('https://port-0-backend-express-sever-mkvwe6z7891e08f1.sel3.cloudtype.app/login', form)
+    axios.post('https://port-0-backend-express-sever-mkvwe6z7891e08f1.sel3.cloudtype.app/ginipet/login', form)
     
       .then(res => {
         //JWT 토근 저장
@@ -146,5 +146,6 @@ function Login(props) {
     </main>
   );
 }
+
 
 export default Login;
