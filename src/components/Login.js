@@ -27,7 +27,8 @@ function Login(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:9070/login', form)
+    // axios.post('http://localhost:9070/login', form)
+    axios.post('https://port-0-ginipet-backend-mkvwe6z7891e08f1.sel3.cloudtype.app/login', form)
       .then(res => {
         //JWT 토근 저장
         localStorage.setItem('token', res.data.token);

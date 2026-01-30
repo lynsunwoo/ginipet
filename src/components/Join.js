@@ -33,7 +33,9 @@ function Join(props) {
     // .catch(()=>{
     //   setError('이미 사용중인 아이디입니다');
     // });
-    axios.post('http://localhost:9070/check-username', {
+
+    // axios.get(`http://localhost:9070/check-username/${form.username}`)
+    axios.post('https://port-0-ginipet-backend-mkvwe6z7891e08f1.sel3.cloudtype.app/check-username', {
       username: form.username
     })
       .then(res => {
@@ -75,7 +77,9 @@ function Join(props) {
       alert('개인 정보처리 방침에 동의해주세요');
       return;
     }
-    axios.post('http://localhost:9070/register', form)
+
+    // axios.get(`http://localhost:9070/check-username/${form.username}`)
+    axios.post('https://port-0-ginipet-backend-mkvwe6z7891e08f1.sel3.cloudtype.app/register', form)
       .then(res => {
         alert('회원가입이 완료되었습니다. 로그인 페이지로 이동합니다.');
         navigate('/login');
