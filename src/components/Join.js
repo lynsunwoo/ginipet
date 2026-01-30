@@ -79,7 +79,7 @@ function Join(props) {
     }
 
     // axios.get(`http://localhost:9070/check-username/${form.username}`)
-    axios.post('https://port-0-backend-express-sever-mkvwe6z7891e08f1.sel3.cloudtype.app/register', form)
+    axios.post('https://port-0-backend-express-sever-mkvwe6z7891e08f1.sel3.cloudtype.app/ginipet/register', form)
       .then(res => {
         alert('회원가입이 완료되었습니다. 로그인 페이지로 이동합니다.');
         navigate('/login');
@@ -184,5 +184,6 @@ function Join(props) {
     </main>
   );
 }
+
 
 export default Join;
